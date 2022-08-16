@@ -5,7 +5,7 @@ import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
 
 
-export default function confirmtransaction(){
+export default function Confirmtransaction(){
     const [hasError, setError] = useState(false);
     const [trindex, settrindex] = useState("");
     const [signer, setSigner] = useState();

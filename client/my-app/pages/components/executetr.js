@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 
 
 
-export default function executetransaction(){
+export default function Executetransaction(){
     const [trindex, settrindex] = useState("");
     const [hasError, setError] = useState(false);
 

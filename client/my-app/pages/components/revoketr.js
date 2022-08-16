@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 
 
 
-export default function revoketransaction(){
+export default function Revoketransaction(){
     const [trindex, settrindex] = useState("");
     const [hasError, setError] = useState(false);
 

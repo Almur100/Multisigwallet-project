@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
 
-export default function submittransaction(){
+export default function Submittransaction(){
     const [hasError, setError] = useState(false);
     const [submittr, setsubmittr] = useState({
         address: "",
