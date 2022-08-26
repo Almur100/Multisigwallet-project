@@ -62,7 +62,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-             NFT RealEstate Marketplace
+             Blockchain Multisigwallet
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -103,13 +103,25 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                  <Link href="/components/allRealestate">RealEstates</Link>
+                  <Link href="/components/submittr">Submit</Link>
                   
                   </Typography>
                 </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                  <Link href="/components/myasset">my assets</Link>
+                  <Link href="/components/confirmtr">confirm</Link>
+                  
+                  </Typography>
+                </MenuItem>
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                  <Link href="/components/executetr">execute</Link>
+                  
+                  </Typography>
+                </MenuItem>
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                  <Link href="/components/revoketr">revoke</Link>
                   
                   </Typography>
                 </MenuItem>
@@ -154,7 +166,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href="/components/allRealestate">RealEstates</Link>
+                <Link href="/components/submittr">Submit </Link>
                
               </Button>
               <Button
@@ -163,81 +175,31 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href="/components/myasset">my assets</Link>
+                <Link href="/components/confirmtr">confirm</Link>
+               
+              </Button>
+              <Button
+                
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                <Link href="/components/executetr">execute</Link>
+               
+              </Button>
+              <Button
+                
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                <Link href="/components/revoketr">revoke</Link>
                
               </Button>
             
           </Box>
 
-          <Box mr={10} sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open service">
-              <IconButton color='inherit' aria-label='menu' onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Typography>Dashboard </Typography>
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-
-            >
-
-              <MenuItem onClick={handleCloseUserMenu}>
-
-                <Link sx={{ textDecoration: 'none', color: 'inherit' }} href="/components/submittr">addbuyerseller</Link>
-
-
-
-
-              </MenuItem>
-              <MenuItem>
-
-
-                <Link href="/components/confirmtr">addasset</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/executetr">mintnft</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/revoketr">addfractionasset</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/buyasset">buyasset</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/addbuyasset">addbuyfractionasset</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/sellon">sellon</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/selloff">selloff</Link>
-
-              </MenuItem>
-              <MenuItem>
-                <Link href="/components/subscribe">subscribe</Link>
-
-              </MenuItem>
-
-            </Menu>
-          </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

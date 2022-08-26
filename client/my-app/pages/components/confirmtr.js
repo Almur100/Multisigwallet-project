@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
+import mabi from './multisigwallet.json';
 
 
 export default function Confirmtransaction(){
@@ -29,9 +30,9 @@ export default function Confirmtransaction(){
       async function confirmTr(e) {
         e.preventDefault();
         // const contractAddress = "0x6ef8c7f41f2adad277fe204703c0a77c1cb58ce8";
-        const contractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+        const contractAddress = "0xbbd98e8f7d1a2a51b479ab8d32a5f06c602a31dc";
     
-        const abi = realestateabi;
+        const abi = mabi.abi;
         const contract = new ethers.Contract(contractAddress, abi, signer);
         const _trindex = trindex;
         // const _amount = submittr.amount;
@@ -79,7 +80,7 @@ export default function Confirmtransaction(){
         </>
       ) : (
         <Container>
-         <Box sx={{ marginLeft: '550px', marginTop: '10px', marginBottom: '10px' }}>
+         <Box sx={{ marginLeft: '465px', marginTop: '10px', marginBottom: '10px' }}>
         <Button type="submit" variant='contained' color='primary' onClick={connect}> connect wallet </Button>
       </Box>
       <Card sx={{ maxWidth: 450, margin: '0 auto', padding: '20px,5px' }}>
@@ -89,7 +90,7 @@ export default function Confirmtransaction(){
               <TextField
                 type="number"
 
-                placeholder='Enter cancel id'
+                placeholder='Enter transaction id'
 
                 onChange={confirmEvent}
                 value={trindex}
@@ -97,7 +98,7 @@ export default function Confirmtransaction(){
               />
               <Box sx={{ marginTop: '20px', marginLeft: '130px' }}>
 
-                <Button type="submit" onClick={confirmTr} variant='contained' color='primary'>cancel</Button>
+                <Button type="submit" onClick={confirmTr} variant='contained' color='primary'>confirm</Button>
               </Box>
             </Grid>
           </Grid>
